@@ -1,0 +1,120 @@
+{
+  "success": true,
+  "orders": [
+    {
+      "id": "ORD-001",
+      "client_name": "ООО Ромашка",
+      "point_name": "Магазин на Ленина",
+      "address": "ул. Ленина, д. 42",
+      "date": "2026-03-24",
+      "agent": "Иванов А.П.",
+      "invoice_number": "НК-00001234",
+      "invoice_sum": 15750.00,
+      "latitude": 55.7558,
+      "longitude": 37.6173,
+      "items": [
+        {"name": "Молоко 3.2% 1л", "quantity": 10, "price": 89.90, "total": 899.00},
+        {"name": "Хлеб белый", "quantity": 20, "price": 45.50, "total": 910.00},
+        {"name": "Масло сливочное 82.5%", "quantity": 5, "price": 189.00, "total": 945.00},
+        {"name": "Сметана 20% 400г", "quantity": 15, "price": 79.90, "total": 1198.50},
+        {"name": "Кефир 2.5% 1л", "quantity": 12, "price": 74.90, "total": 898.80},
+        {"name": "Творог 9% 200г", "quantity": 20, "price": 64.50, "total": 1290.00},
+        {"name": "Яйца С1 10шт", "quantity": 8, "price": 109.90, "total": 879.20},
+        {"name": "Сыр Российский 300г", "quantity": 10, "price": 249.90, "total": 2499.00},
+        {"name": "Колбаса Докторская 400г", "quantity": 6, "price": 319.90, "total": 1919.40},
+        {"name": "Сосиски Молочные 500г", "quantity": 10, "price": 231.10, "total": 2311.10}
+      ]
+    },
+    {
+      "id": "ORD-002",
+      "client_name": "ИП Петров С.В.",
+      "point_name": "Мини-маркет Удача",
+      "address": "пр. Мира, д. 15",
+      "date": "2026-03-24",
+      "agent": "Сидорова Е.М.",
+      "invoice_number": "НК-00001235",
+      "invoice_sum": 8320.50,
+      "latitude": 55.7612,
+      "longitude": 37.6298,
+      "items": [
+        {"name": "Вода питьевая 5л", "quantity": 20, "price": 89.00, "total": 1780.00},
+        {"name": "Сок апельсиновый 1л", "quantity": 12, "price": 129.90, "total": 1558.80},
+        {"name": "Чай черный 100п", "quantity": 5, "price": 189.90, "total": 949.50},
+        {"name": "Кофе растворимый 95г", "quantity": 8, "price": 299.90, "total": 2399.20},
+        {"name": "Сахар 1кг", "quantity": 10, "price": 79.90, "total": 799.00},
+        {"name": "Печенье овсяное 300г", "quantity": 6, "price": 139.00, "total": 834.00}
+      ]
+    },
+    {
+      "id": "ORD-003",
+      "client_name": "Супермаркет Весна",
+      "point_name": "Весна на Садовой",
+      "address": "ул. Садовая, д. 7",
+      "date": "2026-03-24",
+      "agent": "Иванов А.П.",
+      "invoice_number": "НК-00001236",
+      "invoice_sum": 42100.00,
+      "latitude": 55.7480,
+      "longitude": 37.6050,
+      "items": [
+        {"name": "Молоко 3.2% 1л", "quantity": 50, "price": 89.90, "total": 4495.00},
+        {"name": "Хлеб белый", "quantity": 40, "price": 45.50, "total": 1820.00},
+        {"name": "Масло сливочное 82.5%", "quantity": 30, "price": 189.00, "total": 5670.00},
+        {"name": "Сметана 20% 400г", "quantity": 25, "price": 79.90, "total": 1997.50},
+        {"name": "Кефир 2.5% 1л", "quantity": 30, "price": 74.90, "total": 2247.00},
+        {"name": "Творог 9% 200г", "quantity": 40, "price": 64.50, "total": 2580.00},
+        {"name": "Яйца С1 10шт", "quantity": 30, "price": 109.90, "total": 3297.00},
+        {"name": "Сыр Российский 300г", "quantity": 20, "price": 249.90, "total": 4998.00},
+        {"name": "Колбаса Докторская 400г", "quantity": 15, "price": 319.90, "total": 4798.50},
+        {"name": "Сосиски Молочные 500г", "quantity": 10, "price": 231.10, "total": 2311.10},
+        {"name": "Рис круглый 900г", "quantity": 12, "price": 99.90, "total": 1198.80},
+        {"name": "Макароны спагетти 500г", "quantity": 15, "price": 79.90, "total": 1198.50},
+        {"name": "Мука пшеничная 2кг", "quantity": 10, "price": 149.90, "total": 1499.00},
+        {"name": "Подсолнечное масло 1л", "quantity": 10, "price": 149.90, "total": 1499.00},
+        {"name": "Томатная паста 380г", "quantity": 8, "price": 99.90, "total": 799.20}
+      ]
+    },
+    {
+      "id": "ORD-004",
+      "client_name": "Кафе Уют",
+      "point_name": "Кафе Уют центр",
+      "address": "ул. Тверская, д. 22",
+      "date": "2026-03-24",
+      "agent": "Козлов Д.А.",
+      "invoice_number": "НК-00001237",
+      "invoice_sum": 5890.00,
+      "latitude": 55.7650,
+      "longitude": 37.6100,
+      "items": [
+        {"name": "Сливки 33% 1л", "quantity": 10, "price": 299.00, "total": 2990.00},
+        {"name": "Молоко 3.2% 1л", "quantity": 20, "price": 89.90, "total": 1798.00},
+        {"name": "Масло сливочное 82.5%", "quantity": 3, "price": 189.00, "total": 567.00},
+        {"name": "Сахар 1кг", "quantity": 5, "price": 79.90, "total": 399.50},
+        {"name": "Шоколад горький 90г", "quantity": 3, "price": 45.00, "total": 135.50}
+      ]
+    },
+    {
+      "id": "ORD-005",
+      "client_name": "ООО ТрейдФуд",
+      "point_name": "Склад ТрейдФуд",
+      "address": "ул. Промышленная, д. 8, стр. 3",
+      "date": "2026-03-24",
+      "agent": "Сидорова Е.М.",
+      "invoice_number": "НК-00001238",
+      "invoice_sum": 98500.00,
+      "latitude": 55.7400,
+      "longitude": 37.6350,
+      "items": [
+        {"name": "Молоко 3.2% 1л", "quantity": 200, "price": 89.90, "total": 17980.00},
+        {"name": "Кефир 2.5% 1л", "quantity": 150, "price": 74.90, "total": 11235.00},
+        {"name": "Сметана 20% 400г", "quantity": 100, "price": 79.90, "total": 7990.00},
+        {"name": "Творог 9% 200г", "quantity": 100, "price": 64.50, "total": 6450.00},
+        {"name": "Масло сливочное 82.5%", "quantity": 80, "price": 189.00, "total": 15120.00},
+        {"name": "Яйца С1 10шт", "quantity": 100, "price": 109.90, "total": 10990.00},
+        {"name": "Сыр Российский 300г", "quantity": 50, "price": 249.90, "total": 12495.00},
+        {"name": "Колбаса Докторская 400г", "quantity": 50, "price": 319.90, "total": 15995.00},
+        {"name": "Шоколад молочный 90г", "quantity": 5, "price": 49.00, "total": 245.00}
+      ]
+    }
+  ]
+}
