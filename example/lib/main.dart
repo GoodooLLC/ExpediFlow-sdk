@@ -4,14 +4,9 @@ import 'package:expediflow_sdk/expediflow_sdk.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  OrderSellingSDK.init(SdkConfig(
-    appConfig: AppConfig(
-      ordersUrl: 'https://your-server/api/GetOrders',
-      login: 'user',
-      password: 'pass',
-      driverId: 'driver-id',
-    ),
-  ));
+  // Параметры подключения (URL сервера, логин, пароль, ID водителя)
+  // задаются пользователем внутри SDK в экране настроек.
+  OrderSellingSDK.init(SdkConfig(appConfig: AppConfig()));
 
   runApp(const ExampleApp());
 }

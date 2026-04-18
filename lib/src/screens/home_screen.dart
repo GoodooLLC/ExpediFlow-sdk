@@ -31,17 +31,15 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   // Загрузить настройки (без автозагрузки заявок - только по кнопке "Обновить").
-  // Если настройки не заданы - открыть экран настроек.
+  // Если настройки не заданы - открывать окно настроек НЕ надо:
+  // пользователь сам откроет их кнопкой в AppBar.
   Future<void> _initAndLoad() async {
     final config = await _configService.loadConfig();
     if (!mounted) return;
 
-    final provider = context.read<OrdersProvider>();
-
     if (config != null && config.isValid) {
+      final provider = context.read<OrdersProvider>();
       provider.init(config);
-    } else {
-      _openSettings();
     }
   }
 

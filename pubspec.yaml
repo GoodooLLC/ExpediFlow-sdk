@@ -1,6 +1,6 @@
 name: expediflow_sdk
 description: ExpediFlow Order Selling SDK - модуль для автоматизации работы экспедиторов
-version: 1.0.0
+version: 1.0.1
 
 environment:
   sdk: ^3.10.1

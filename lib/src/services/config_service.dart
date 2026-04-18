@@ -54,8 +54,8 @@ class ConfigService {
     final login = prefs.getString(_keyLogin);
     final driverId = prefs.getString(_keyDriverId);
     final kkmUrl = prefs.getString(_keyKkmUrl);
-    final kkmRnm = prefs.getString(_keyKkmRnm) ?? '0000000000023458';
-    final kkmFmNumber = prefs.getString(_keyKkmFmNumber) ?? '0000000002432961';
+    final kkmRnm = prefs.getString(_keyKkmRnm) ?? '';
+    final kkmFmNumber = prefs.getString(_keyKkmFmNumber) ?? '';
     final vatRate = prefs.getDouble(_keyVatRate) ?? 0.0;
     final stRate = prefs.getDouble(_keyStRate) ?? 0.0;
     final bankAccount = prefs.getString(_keyBankAccount) ?? '';
@@ -64,20 +64,16 @@ class ConfigService {
     final payBankEnabled = prefs.getBool(_keyPayBankEnabled) ?? true;
     final password = await _secureStorage.read(key: _keyPassword);
 
-    if (ordersUrl == null || login == null || driverId == null) {
+    if (ordersUrl == null && login == null && driverId == null &&
+        kkmUrl == null && kkmRnm.isEmpty && kkmFmNumber.isEmpty) {
       return null;
     }
 
-    // Замена устаревшего localhost на реальный сервер
-    final actualOrdersUrl = ordersUrl.contains('localhost')
-        ? 'https://test1c.goodoo.kg/Goodoo/hs/OrderSelling/GetOrders'
-        : ordersUrl;
-
     return AppConfig(
-      ordersUrl: actualOrdersUrl,
-      login: login,
+      ordersUrl: ordersUrl ?? '',
+      login: login ?? '',
       password: password ?? '',
-      driverId: driverId,
+      driverId: driverId ?? '',
       kkmUrl: kkmUrl,
       kkmRnm: kkmRnm,
       kkmFmNumber: kkmFmNumber,

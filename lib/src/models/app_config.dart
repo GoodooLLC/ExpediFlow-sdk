@@ -1,28 +1,30 @@
-// Конфигурация SDK - настройки подключения к серверу
+// Конфигурация SDK - настройки подключения к серверу.
+// Параметры подключения (ordersUrl/login/password/driverId) опциональны:
+// они задаются в настройках внутри SDK, а не передаются извне при вызове.
 
 class AppConfig {
   final String ordersUrl;
   final String login;
   final String password;
   final String driverId;
-  final String? kkmUrl; // http://77.220.204.134:9995
-  final String kkmRnm; // РНМ: 0000000000023458
-  final String kkmFmNumber; // Номер ФП: 0000000002432961
-  final double vatRate; // Ставка НДС, % (по умолчанию 0 - без НДС)
-  final double stRate; // Ставка НсП, % (по умолчанию 0 - без НсП)
+  final String? kkmUrl;
+  final String kkmRnm; // РНМ
+  final String kkmFmNumber; // Номер ФП
+  final double vatRate; // Ставка НДС, %
+  final double stRate; // Ставка НсП, %
   final String bankAccount; // Лицевой счёт
   final String bankName; // Название банка
   final bool payQrEnabled; // Метод оплаты: QR
   final bool payBankEnabled; // Метод оплаты: банковское приложение
 
   AppConfig({
-    required this.ordersUrl,
-    required this.login,
-    required this.password,
-    required this.driverId,
+    this.ordersUrl = '',
+    this.login = '',
+    this.password = '',
+    this.driverId = '',
     this.kkmUrl,
-    this.kkmRnm = '0000000000023458',
-    this.kkmFmNumber = '0000000002432961',
+    this.kkmRnm = '',
+    this.kkmFmNumber = '',
     this.vatRate = 0.0,
     this.stRate = 0.0,
     this.bankAccount = '',

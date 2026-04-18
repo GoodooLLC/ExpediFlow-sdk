@@ -54,26 +54,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
       _loginController.text = config.login;
       _passwordController.text = config.password;
       _driverIdController.text = config.driverId;
-      _kkmUrlController.text = config.kkmUrl ?? 'http://77.220.204.134:9995';
+      _kkmUrlController.text = config.kkmUrl ?? '';
       _kkmRnmController.text = config.kkmRnm;
       _kkmFmController.text = config.kkmFmNumber;
-      _vatRateController.text = config.vatRate.toString();
-      _stRateController.text = config.stRate.toString();
+      _vatRateController.text = config.vatRate != 0.0 ? config.vatRate.toString() : '';
+      _stRateController.text = config.stRate != 0.0 ? config.stRate.toString() : '';
       _bankAccountController.text = config.bankAccount;
       _bankNameController.text = config.bankName;
       _payQrEnabled = config.payQrEnabled;
       _payBankEnabled = config.payBankEnabled;
-    } else {
-      // Дефолтные значения
-      _urlController.text = 'https://test1c.goodoo.kg/Goodoo/hs/OrderSelling/GetOrders';
-      _loginController.text = 'goodoo';
-      _passwordController.text = 'rjvfylf ghjatccbjyfkjd';
-      _driverIdController.text = 'eb572cff0d4640cc8cf72752684c5373';
-      _kkmUrlController.text = 'http://77.220.204.134:9995';
-      _kkmRnmController.text = '0000000000023458';
-      _kkmFmController.text = '0000000002432961';
-      _vatRateController.text = '0';
-      _stRateController.text = '0';
     }
 
     setState(() {
@@ -329,7 +318,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       keyboardType: TextInputType.url,
       decoration: const InputDecoration(
         labelText: 'Адрес ККМ',
-        hintText: 'http://77.220.204.134:9995',
+        hintText: 'http://ip:port',
         prefixIcon: Icon(Icons.point_of_sale),
       ),
     );
@@ -340,7 +329,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
       controller: _kkmRnmController,
       decoration: const InputDecoration(
         labelText: 'РНМ (регистрационный номер)',
-        hintText: '0000000000023458',
         prefixIcon: Icon(Icons.numbers),
       ),
     );
@@ -351,7 +339,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
       controller: _kkmFmController,
       decoration: const InputDecoration(
         labelText: 'Номер фискальной памяти',
-        hintText: '0000000002432961',
         prefixIcon: Icon(Icons.memory),
       ),
     );

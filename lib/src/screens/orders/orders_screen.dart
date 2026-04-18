@@ -238,30 +238,38 @@ class OrdersScreen extends StatelessWidget {
   }
 
   Widget _buildEmptyState(BuildContext context, OrdersProvider provider) {
+    final notConfigured = provider.api == null;
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(24),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.inbox_outlined, size: 64, color: Colors.grey[400]),
+            Icon(
+              notConfigured ? Icons.settings_outlined : Icons.inbox_outlined,
+              size: 64,
+              color: Colors.grey[400],
+            ),
             const SizedBox(height: 16),
-            const Text(
-              'Нет заявок',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+            Text(
+              notConfigured ? 'Не настроено подключение' : 'Нет заявок',
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
             ),
             const SizedBox(height: 8),
             Text(
-              'За выбранный период заявок нет.\nПопробуйте изменить период вверху.',
+              notConfigured
+                  ? 'Откройте настройки (иконка шестерёнки вверху справа)\nи укажите адрес сервера, логин, пароль и ID водителя.'
+                  : 'За выбранный период заявок нет.\nПопробуйте изменить период вверху.',
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.grey[600]),
             ),
             const SizedBox(height: 16),
-            ElevatedButton.icon(
-              onPressed: provider.fetchOrders,
-              icon: const Icon(Icons.refresh),
-              label: const Text('Обновить'),
-            ),
+            if (!notConfigured)
+              ElevatedButton.icon(
+                onPressed: provider.fetchOrders,
+                icon: const Icon(Icons.refresh),
+                label: const Text('Обновить'),
+              ),
           ],
         ),
       ),
